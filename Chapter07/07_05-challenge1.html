@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>Chapter 7, Movie 5</title>
+    <style type="text/css">
+        td {
+            text-align: center;
+            border: 1px solid;
+            width: 200px;
+        }
+        table {
+            border: 1px solid;
+            width: 800px;
+        }
+    </style>
+    <script lang="javascript">
+        function rotate() {
+            document.getElementById("rotation").hidden = false;
+            document.getElementById("scale").hidden = true;
+        }
+        function scale() {
+            document.getElementById("rotation").hidden = true;
+            document.getElementById("scale").hidden = false;
+        }
+    </script>
+</head>
+<body>
+    <h1>Playing with an Image</h1>
+    <table cellpadding="2">
+        <tbody>
+            <tr>
+                <td>
+                    <img src="PHP-logo.png" />
+                </td>
+                <td>
+                <form method="get" action="07_05-solution1.php" >
+                        <p><input checked type="radio" name="manipulate" value="rotate" onclick="rotate();" />Rotate</p>
+                        <p><input type="radio" name="manipulate" value="size" onclick="scale();" />Resize</p>
+                </td>
+                <td>
+                        <div id="rotation" >
+                            <p>Degrees <select name="degrees">
+                            <option>180</option>
+                            <option>150</option>
+                            <option>135</option>
+                            <option>120</option>
+                            <option>90</option>
+                            <option>60</option>
+                            <option>45</option>
+                            <option>30</option>
+                            <option selected>0</option>
+                            <option>-30</option>
+                            <option>-45</option>
+                            <option>-60</option>
+                            <option>-90</option>
+                            <option>-120</option>
+                            <option>-135</option>
+                            <option>-150</option>
+                            <option>-180</option>
+                            </select></p>
+                        </div>
+                        <div id="scale" hidden >
+                            <p>Percentage <select name="size">
+                            <option>250</option>
+                            <option>200</option>
+                            <option>150</option>
+                            <option selected>100</option>
+                            <option>75</option>
+                            <option>50</option>
+                            <option>25</option>
+                            <option>10</option>
+                            </select></p>
+                        </div>
+                    <p><input type="submit"></p>
+                </td>
+                </form>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
