@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Chapter 6, Movie 2</title>
+    <title>Chapter 6, Movie 3</title>
 </head>
 <body>
 <?php
